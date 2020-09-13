@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Aptech - LẬP TRÌNH CHẤT PHẤT TƯƠNG LAI</title>
+    <script>
+        document.documentElement.classList.remove("no-js");
+    </script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous" />
+    <link rel="shortcut icon" href="./assets/images/favicon.ico" type="image/x-icon" sizes="32x32" />
+    <link rel="preload" as="style" type="text/css" href="./css/slick.css" onload="this.rel = 'stylesheet'" />
+    <link rel="preload" as="style" type="text/css" href="./css/slick-theme.css" onload="this.rel = 'stylesheet'" />
+    <link rel="preload" as="style" href="./css/style.min.css?v=3" onload="this.rel = 'stylesheet'" />
+    <link rel="preload" as="script" href="./js/slick.min.js" />
+    <link rel="preload" as="script" href="./js/common.js" />
+    <link rel="preload" as="script" href="./js/jquery.lazy.min.js" />
+    <link rel="preload" href="./css/fonts/slick.woff" as="font" type="font/woff2" crossorigin="anonymous" />
+    <link rel="preload" href="./assets/fonts/Roboto-Bold.ttf" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="./assets/fonts/Roboto-Medium.ttf" as="font" crossorigin="anonymous" />
+    <link rel="preload" href="./assets/fonts/Roboto-Regular.ttf" as="font" crossorigin="anonymous" />
+    <script type="text/javascript">
+        function writeCookie(name, value, days) {
+            var date, expires;
+            if (days) {
+                date = new Date();
+                date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+                expires = "; expires=" + date.toGMTString();
+            } else {
+                expires = "";
+            }
+            document.cookie = name + "=" + value + expires + "; path=/";
+        }
+
+        function readCookie(name) {
+            var i,
+                c,
+                ca,
+                nameEQ = name + "=";
+            ca = document.cookie.split(";");
+            for (i = 0; i < ca.length; i++) {
+                c = ca[i];
+                while (c.charAt(0) == " ") {
+                    c = c.substring(1, c.length);
+                }
+                if (c.indexOf(nameEQ) == 0) {
+                    return c.substring(nameEQ.length, c.length);
+                }
+            }
+            return "";
+        }
+
+        function getParameterByName(name) {
+            name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+            var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                results = regex.exec(location.search);
+            return results === null ?
+                "" :
+                decodeURIComponent(results[1].replace(/\+/g, " "));
+        }
+
+        var utm_source = getParameterByName("utm_source");
+        var utm_medium = getParameterByName("utm_medium");
+        var utm_campaign = getParameterByName("utm_campaign");
+        var utm_term = getParameterByName("utm_term");
+        var utm_content = getParameterByName("utm_content");
+
+        if (utm_source != "") {
+            writeCookie("utm_source", utm_source, 30);
+            writeCookie("utm_medium", utm_medium, 30);
+            writeCookie("utm_campaign", utm_campaign, 30);
+            writeCookie("utm_term", utm_term, 30);
+            writeCookie("utm_content", utm_content, 30);
+        }
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                "gtm.start": new Date().getTime(),
+                event: "gtm.js",
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != "dataLayer" ? "&l=" + l : "";
+            j.async = true;
+            j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, "script", "dataLayer", "GTM-5WG9HCG");
+    </script>
+    <!-- End Google Tag Manager -->
+</head>
+
+<body data-spy="scroll" data-target=".navbar" data-offset="80">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5WG9HCG" height="0" width="0" style="display: none; visibility: hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div class="btn_top">
+        <figure>
+            <img data-src="./assets/images/btn_top.png" alt="" class="img-fluid lazy" />
+        </figure>
+    </div>
+    <header class="fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href="#">
+                    <figure>
+                        <img src="./assets/images/logo.svg" alt="" class="img-fluid mx-auto" />
+                    </figure>
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto mr-0">
+                        <li class="nav-item page-scroll">
+                            <a class="nav-link active" href="#trangchu">
+                                <p>TRANG CHỦ</p>
+                            </a>
+                        </li>
+                        <li class="nav-item page-scroll">
+                            <a class="nav-link" href="#loithe">
+                                <p>6 LỢI THẾ</p>
+                            </a>
+                        </li>
+                        <li class="nav-item page-scroll">
+                            <a class="nav-link" href="#about">
+                                <p>VỀ APTECH</p>
+                            </a>
+                        </li>
+                        <li class="nav-item page-scroll">
+                            <a class="nav-link" href="#cohoi">
+                                <p>CƠ HỘI</p>
+                            </a>
+                        </li>
+                        <li class="nav-item page-scroll">
+                            <a class="nav-link" href="#khoahoc">
+                                <p>CHƯƠNG TRÌNH</p>
+                            </a>
+                        </li>
+                        <li class="nav-item page-scroll">
+                            <a class="nav-link" href="#camnhan">
+                                <p>CẢM NHẬN HỌC VIÊN</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="trangchu">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-lg-6 pad-right-lg-0">
+                        <p>
+                            LẬP TRÌNH CHẤT <span class="break"></span>
+                            <span>PHẤT TƯƠNG LAI</span>
+                        </p>
+                        <ul>
+                            <li>
+                                Cam kết <span>chất lượng đầu ra, 95% có việc làm</span> ngay
+                            </li>
+                            <li>
+                                Bằng cấp <span>quốc tế</span>, trang bị
+                                <span>tiếng Anh</span> chuyên ngành
+                            </li>
+                            <li>Ưu đãi lên đến <span>20% học phí</span></li>
+                            <li>Trả góp học phí <span>0% lãi suất</span></li>
+                        </ul>
+                    </div>
+                    <div class="col-12 col-lg-3 offset-lg-3">
+                        <form>
+                            <p>
+                                ĐĂNG KÝ TƯ VẤN VÀ<span class="break"></span> NHẬN ƯU ĐÃI LÊN
+                            </p>
+                            <input type="text" id="fullname" class="field_input" placeholder="Họ & Tên" />
+                            <input type="tel" id="phone" class="field_input" placeholder="Số điện thoại" />
+                            <input type="email" id="email" class="field_input" placeholder="Email" />
+                            <!-- <input type="hidden" id="form_header" value="Form Header" /> -->
+                            <button type="button" onclick="kiemtra()" class="field_register field_register_header">
+                                <div>ĐĂNG KÝ NGAY</div>
+                                <div class="lds-ring">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <div class="row hocvien">
+                    <div class="col-12 pad0">
+                        <figure>
+                            <img data-src="./assets/images/hv.png" alt="HV" class="img-fluid mx-auto d-none d-sm-block lazy" type="image/png" />
+                            <img data-src="./assets/images/hocvien.png" alt="HV" class="img-fluid mx-auto d-block d-sm-none lazy" type="image/png" />
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="loithe">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="title">
+                            <p>6 LỢI THẾ</p>
+                            <span>KHI HỌC TẠI <strong>APTECH VIỆT NAM</strong></span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 my-auto">
+                        <figure>
+                            <img data-src="./assets/images/loithe_hinh.png" alt="" srcset="" class="img-fluid d-block mx-auto lazy" />
+                        </figure>
+                    </div>
+                    <div class="col-md-8 my-auto">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="loithe__each">
+                                    <figure>
+                                        <img data-src="./assets/images/loithe1.png" alt="" srcset="" class="img-fluid d-block lazy" />
+                                    </figure>
+                                    <div class="loithe__text">
+                                        <p>Song bằng Quốc tế</p>
+                                        <p>
+                                            Bằng Lập trình viên Quốc tế và Bằng Cao đẳng Anh quốc.
+                                            Thăng tiến trong sự nghiệp CNTT tại Việt Nam, mở rộng cơ
+                                            hội làm việc tại nước ngoài và du học .
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="loithe__each">
+                                    <figure>
+                                        <img data-src="./assets/images/loithe2.png" alt="" srcset="" class="img-fluid d-block lazy" />
+                                    </figure>
+                                    <div class="loithe__text">
+                                        <p>Chương trình đào tạo toàn diện</p>
+                                        <p>
+                                            Kiến thức nền tảng chuyên sâu, bắt kịp nhu cầu doanh
+                                            nghiệp. Trang bị tiếng Anh chuyên ngành và kỹ năng mềm.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="loithe__each">
+                                    <figure>
+                                        <img data-src="./assets/images/loithe3.png" alt="" srcset="" class="img-fluid d-block lazy" />
+                                    </figure>
+                                    <div class="loithe__text">
+                                        <p>Hỗ trợ năng lực học tập</p>
+                                        <p>
+                                            Học viên được tham gia miễn phí các lớp học bù, ôn tập,
+                                            hội thảo công nghệ, tham quan doanh nghiệp, cuộc thi
+                                            chuyên ngành…
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="loithe__each">
+                                    <figure>
+                                        <img data-src="./assets/images/loithe4.png" alt="" srcset="" class="img-fluid d-block lazy" />
+                                    </figure>
+                                    <div class="loithe__text">
+                                        <p>Bảo hành công nghệ trọn đời</p>
+                                        <p>
+                                            Sau khi tốt nghiệp, học viên được trở lại Aptech để học
+                                            miễn phí các công nghệ mới cập nhật.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="loithe__each">
+                                    <figure>
+                                        <img data-src="./assets/images/loithe5.png" alt="" srcset="" class="img-fluid d-block lazy" />
+                                    </figure>
+                                    <div class="loithe__text">
+                                        <p>Phương pháp đào tạo tiên tiến</p>
+                                        <p>
+                                            70% thực hành, 04 dự án lớn giúp trải nghiệm làm việc
+                                            thực tế. Sĩ số 24 bạn/ lớp. Giờ học linh hoạt, tự chọn.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="loithe__each">
+                                    <figure>
+                                        <img data-src="./assets/images/loithe6.png" alt="" srcset="" class="img-fluid d-block lazy" />
+                                    </figure>
+                                    <div class="loithe__text">
+                                        <p>Cam kết hỗ trợ việc làm</p>
+                                        <p>
+                                            Được hỗ trợ việc làm theo đúng năng lực học viên, hoàn
+                                            toàn miễn phí và được hỗ trợ nhiều lần.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="duongxeo2">
+            <div class="container-fluid">
+                <div class="row hocvien">
+                    <div class="col-12 pad0">
+                        <picture>
+                            <source srcset="./assets/images/duongxeo2.webp" type="image/webp">
+                            <img data-src="./assets/images/duongxeo2.png" alt="duongxeo2" class="img-fluid d-block mx-auto lazy" type="image/png" />
+                        </picture>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="title">
+                            <p>về aptech</p>
+                            <span><strong>APTECH</strong> – TRÊN 20 NĂM TIÊN PHONG ĐÀO TẠO LẬP
+                                TRÌNH TẠI VIỆT NAM</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-7">
+                        <picture>
+                            <source srcset="./assets/images/about.webp" type="image/webp">
+                            <img data-src="./assets/images/about.png" alt="About hinh" class="img-fluid d-block mx-auto lazy" type="image/png" />
+                        </picture>
+                    </div>
+                    <div class="col-md-5 my-auto">
+                        <div class="about__infor">
+                            <div class="about__infor--yellow">
+                                <p>
+                                    30 năm
+                                    <span>kinh nghiệm</span>
+                                </p>
+                            </div>
+                            <div class="about__infor--orange">
+                                <p>
+                                    1350
+                                    <span>cơ sở đào tạo</span>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="about__infor">
+                            <div class="about__infor--orange">
+                                <p>
+                                    40
+                                    <span>quốc gia</span>
+                                </p>
+                            </div>
+                            <div class="about__infor--yellow">
+                                <p>
+                                    6.8
+                                    <span>triệu sinh viên</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="cohoi">
+            <div class="container-fluid">
+                <div class="row row-relative">
+                    <div class="col-12 col-md-6 bg1">
+                        <div class="content content1">
+                            <p>Cơ hội nghề nghiệp</p>
+                            <p>
+                                Sinh viên Aptech được tuyển dụng <strong>freelance</strong>,
+                                <strong>parttime</strong> ngay trong quá trình học và fulltime
+                                sau khi tốt nghiệp với mức lương khởi điểm trung bình từ
+                                <strong>8.000.000đ</strong> trở lên
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 bg2">
+                        <div class="content content2">
+                            <p>Liên thông du học</p>
+                            <p>
+                                Sau khi tốt nghiệp, sinh viên Aptech có thể học chuyển tiếp
+                                năm cuối tại các trường
+                                <strong>Đại học ở Anh, Úc, Mỹ, Singapore…</strong> với chi phí
+                                tiết kiệm đáng kể.
+                            </p>
+                        </div>
+                    </div>
+                    <picture>
+                        <source srcset="./assets/images/duongxeo3.webp" type="image/webp">
+                        <img data-src="./assets/images/duongxeo3.png" alt="duongxeo3" class="img-fluid d-block mx-auto duongxeo3 lazy" type="image/png" />
+                    </picture>
+                </div>
+            </div>
+        </section>
+
+        <section id="khoahoc">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="title">
+                            <span>CÁC KHÓA HỌC</span>
+                            <p>LẬP TRÌNH</p>
+                        </div>
+                        <div class="khoahoc">
+                            <div class="khoahoc__infor" data-toggle="modal" data-target="#khoahoc_1">
+                                <figure>
+                                    <img src="./assets/images/khoa1.png" alt="" class="img-fluid d-block mx-auto" />
+                                </figure>
+                                <div class="content">
+                                    <p class="khoahoc__name">
+                                        Lập trình website
+                                        <span>chuyên nghiệp</span>
+                                    </p>
+                                    <div class="khoahoc__time">6 tháng</div>
+                                    <p class="detail_view">Xem chi tiết</p>
+                                </div>
+                            </div>
+                            <div class="khoahoc__infor" data-toggle="modal" data-target="#khoahoc_2">
+                                <figure>
+                                    <img src="./assets/images/khoa2.png" alt="" class="img-fluid d-block mx-auto" />
+                                </figure>
+                                <div class="content">
+                                    <p class="khoahoc__name">
+                                        Lập trình phần mềm
+                                        <span>ỨNG DỤNG</span>
+                                    </p>
+                                    <div class="khoahoc__time">12 tháng</div>
+                                    <p class="detail_view">Xem chi tiết</p>
+                                </div>
+                            </div>
+                            <div class="khoahoc__infor" data-toggle="modal" data-target="#khoahoc_3">
+                                <figure>
+                                    <img src="./assets/images/khoa3.png" alt="" class="img-fluid d-block mx-auto" />
+                                </figure>
+                                <div class="content">
+                                    <p class="khoahoc__name">
+                                        Lập trình viên
+                                        <span>quốc tế</span>
+                                    </p>
+                                    <div class="khoahoc__time">30 tháng</div>
+                                    <p class="detail_view">Xem chi tiết</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="camnhan">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="title">
+                            <p>CÁC lập trình viên NÓI GÌ?</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-none d-sm-block d-md-block d-lg-block d-xl-block">
+                    <div class="row cmt-row">
+                        <div class="col-md-3">
+                            <picture>
+                                <source srcset="./assets/images/dev1.webp" type="image/webp">
+                                <img data-src="./assets/images/dev1.png" alt="Dev1" class="img-fluid d-block mx-auto lazy" type="image/png" />
+                            </picture>
+                        </div>
+                        <div class="col-md-7">
+                            <div class="bg_comment1 comment">
+                                <p class="hv_comment">
+                                    “Aptech là một nơi đặc biệt với những đứa trẻ thích gõ code hơn ngồi đọc sách. Nơi mà những thử thách thực tế về lập trình, hay những kinh nghiệm cần thiết ở doanh nghiệp không còn lạ lẫm với chúng em nữa. Khi nhắc đến Aptech, nhà tuyển dụng không còn lo lắng vấn đề thiếu kinh nghiệm làm việc thực tế của ứng viên – vốn vẫn luôn là vấn đề chung của sinh viên mới ra trường.”.
+                                </p>
+                                <div class="hv_name">
+                                    <p>NGUYỄN HỮU QUANG</p>
+                                    <p>Sinh viên Aptech, Giám đốc điều hành EXE Corp</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row cmt-row">
+                        <div class="col-md-7 offset-md-2">
+                            <div class="bg_comment2 comment">
+                                <p class="hv_comment">
+                                    “Thế mạnh của mình là về tư duy logic và tìm hiểu về công nghệ. Và mình cũng muốn được làm việc trong một ngành giúp mình có thể hiểu được thế giới đang phát triển theo những xu hướng nào. Đó là 2 nguyên nhân chính khiến mình quyết định theo đuổi CNTT và Aptech chính là cái tên đầu tiên mà mình lựa chọn. ”.
+                                </p>
+                                <div class="hv_name">
+                                    <p>NGÔ THỊ THU HUYỀN</p>
+                                    <p>
+                                        Sinh viên Aptech, kỹ sư cầu nối của FPT Softwave 5 năm
+                                        liền tại Nhật Bản
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <picture>
+                                <source srcset="./assets/images/dev2.webp" type="image/webp">
+                                <img data-src="./assets/images/dev2.png" alt="Dev2" class="img-fluid d-block mx-auto lazy" type="image/png" />
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-block d-sm-none d-md-none d-lg-none d-xl-none">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="camnhan-hocvien">
+                                <div class="cmt-row">
+                                    <picture>
+                                        <source srcset="./assets/images/dev1.webp" type="image/webp">
+                                        <img src="./assets/images/dev1.png" alt="Dev1" class="img-fluid d-block mx-auto" type="image/png" />
+                                    </picture>
+                                    <div class="bg_comment1 comment">
+                                        <p class="hv_comment">
+                                            “Aptech là một nơi đặc biệt với những đứa trẻ thích gõ code hơn ngồi đọc sách. Nơi mà những thử thách thực tế về lập trình, hay những kinh nghiệm cần thiết ở doanh nghiệp không còn lạ lẫm với chúng em nữa. Khi nhắc đến Aptech, nhà tuyển dụng không còn lo lắng vấn đề thiếu kinh nghiệm làm việc thực tế của ứng viên – vốn vẫn luôn là vấn đề chung của sinh viên mới ra trường.”.
+                                        </p>
+                                        <div class="hv_name">
+                                            <p>NGUYỄN HỮU QUANG</p>
+                                            <p>Sinh viên Aptech, Giám đốc điều hành EXE Corp</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="cmt-row">
+                                    <picture>
+                                        <source srcset="./assets/images/dev2.webp" type="image/webp">
+                                        <img src="./assets/images/dev2.png" alt="Dev2" class="img-fluid d-block mx-auto" type="image/png" />
+                                    </picture>
+                                    <div class="bg_comment2 comment">
+                                        <p class="hv_comment">
+                                            “Thế mạnh của mình là về tư duy logic và tìm hiểu về công nghệ. Và mình cũng muốn được làm việc trong một ngành giúp mình có thể hiểu được thế giới đang phát triển theo những xu hướng nào. Đó là 2 nguyên nhân chính khiến mình quyết định theo đuổi CNTT và Aptech chính là cái tên đầu tiên mà mình lựa chọn. ”.
+                                        </p>
+                                        <div class="hv_name">
+                                            <p>NGÔ THỊ THU HUYỀN</p>
+                                            <p>
+                                                Sinh viên Aptech, kỹ sư cầu nối của FPT Softwave 5 năm
+                                                liền tại Nhật Bản
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="form_ft">
+            <div class="container">
+                <!-- <div class="row d-block d-sm-none">
+                    <div class="col-12">
+                        <figure>
+                            <img src="./assets/images/hv_ft.png" alt="" class="img-fluid d-block mx-auto" />
+                        </figure>
+                    </div>
+                </div> -->
+                <div class="row">
+                    <div class="col-lg-4 offset-lg-6">
+                        <picture>
+                            <source srcset="./assets/images/computer.webp" type="image/webp">
+                            <img data-src="./assets/images/computer.png" alt="computer" class="img-fluid d-block mx-auto lazy" type="image/png" />
+                        </picture>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-6 my-auto">
+                        <div class="hocphi_tragop">
+                            <div class="common">
+                                <div class="common__title">
+                                    <p>học phí</p>
+                                </div>
+                                <div class="common__content">
+                                    <p>Ưu đãi lên đến</p>
+                                    <p>20%</p>
+                                </div>
+                            </div>
+                            <div class="common">
+                                <div class="common__title">
+                                    <p>trả góp</p>
+                                </div>
+                                <div class="common__content">
+                                    <p>lãi suất</p>
+                                    <p>0%</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <p>Đăng ký tư vấn và nhận ưu đãi</p>
+                        <form>
+                            <input type="text" id="fullname_ft" class="field_input field_input--border" placeholder="Họ & Tên" />
+                            <input type="tel" id="phone_ft" class="field_input field_input--border" placeholder="Số điện thoại" />
+                            <input type="email" id="email_ft" class="field_input field_input--border" placeholder="Email" />
+                            <input type="hidden" id="form_footer" value="Form Footer" />
+                            <button type="button" onclick="kiemtra_ft()" class="field_register field_register_footer">
+                                <div>ĐĂNG KÝ NGAY</div>
+                                <div class="lds-ring">
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                    <div></div>
+                                </div>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="thongtin">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 offset-lg-2 my-auto">
+                        <figure>
+                            <img data-src="./assets/images/logo_ft.png" alt="" class="img-fluid d-block lazy" />
+                        </figure>
+                    </div>
+                    <div class="col-lg-4 offset-lg-1">
+                        <ul>
+                            <li>
+                                <strong>TP.HCM</strong> <br />
+                                212 - 214 Nguyễn Đình Chiểu, P.6, Q.3<br />
+                                Tel: <strong>1800 1779</strong>
+                            </li>
+                            <li>
+                                <strong>Hà Nội</strong> <br />
+                                54 Lê Thanh Nghị, Q. Hai Bà Trưng<br />
+                                Tel: <strong>1800 1141</strong><br />
+                                <br />
+                                285 Đội Cấn, Q. Ba Đình<br />
+                                Tel: <strong>1800 1147</strong>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>© 2020 Aptech Vienam. All rights reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div class="modal fade" id="khoahoc_1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="row">
+                    <div class="col-lg-5 pad0">
+                        <figure>
+                            <img data-src="./assets/images/popup_khoahoc1.png" alt="" class="img-fluid d-block lazy">
+                        </figure>
+                    </div>
+                    <div class="col-lg-7 pad0">
+                        <div class="popup_khoahoc">
+                            <div class="khoahoc_title">
+                                <p>
+                                    Lập trình website
+                                    <span>chuyên nghiệp</span>
+                                </p>
+                            </div>
+                            <div class="khoahoc_content">
+                                <p>
+                                    • Áp dụng tư duy để viết chương trình trong ngôn ngữ lập trình C. <br />
+                                    • Dùng HTML5/CSS3/ JavaScript để lập trình các cấu trúc web và ứng dụng. <br />
+                                    • Nghiên cứu Framework Boostrap và Jquery để thiết kế ứng dụng website và mobile web. <br />
+                                    • Chuẩn hóa, quản trị cơ sở dữ liệu. <br />
+                                    • Hiểu các nguyên lý thiết kế, lập trình quản lý cơ sở dữ liệu (NCC module). <br />
+                                    • Xây dựng ứng dụng web bằng PHP. <br />
+                                    • Sử dụng Adobe Dreamweaver phát triển các trang web tương tác.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="khoahoc_2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="row">
+                    <div class="col-lg-5 pad0">
+                        <figure>
+                            <img data-src="./assets/images/popup_khoahoc2.png" alt="" class="img-fluid d-block lazy">
+                        </figure>
+                    </div>
+                    <div class="col-lg-7 pad0">
+                        <div class="popup_khoahoc">
+                            <div class="khoahoc_title">
+                                <p>
+                                    Lập trình VIÊN
+                                    <span>QUỐC TẾ</span>
+                                </p>
+                            </div>
+                            <div class="khoahoc_content">
+                                <p class="hocky">
+                                    Học kỳ 1:
+                                </p>
+                                <p>
+                                    • Áp dụng tư duy để viết chương trình trong ngôn ngữ lập trình C <br />
+                                    • Dùng HTML5/CSS3/ JavaScript để lập trình các cấu trúc web và ứng dụng<br />
+                                    • Nghiên cứu Framework Boostrap và Jquery để thiết kế ứng dụng website và mobile web<br />
+                                    • Chuẩn hóa, quản trị cơ sở dữ liệu<br />
+                                    • Hiểu các nguyên lý thiết kế, lập trình quản lý cơ sở dữ liệu (NCC module)<br />
+                                    • Xây dựng ứng dụng web bằng PHP<br />
+                                    • Sử dụng Adobe Dreamweaver phát triển các trang web tương tác
+                                </p>
+                                <p class="hocky">
+                                    Học kỳ 2:
+                                </p>
+                                <p>
+                                    • Sử dụng XML và JSON để lưu trữ và trao đổi dữ liệu<br />
+                                    • Thiết kế và phát triển ứng dụng desktop bằng Java<br />
+                                    • Lập trình hướng đối tượng sử dụng Java<br />
+                                    • Hiểu được đặc điểm của hệ thống thông tin cùng với các quy trình và công cụ được sử dụng trong việc phát triển các hệ thống ứng dụng máy tính (NCC module)<br />
+                                    • Xây dựng ứng dụng thực tế bằng Java<br />
+                                    • Lập trình hướng đối tượng với C#<br />
+                                    • Phát triển Website hướng dữ liệu (NCC Module)
+
+                                </p>
+                                <p class="hocky">
+                                    Học kỳ 3:
+                                </p>
+                                <p>
+                                    • Phát triển các ứng dụng Window Form, Window Store bằng công nghệ .Net Microsoft<br />
+                                    • Xây dựng website ASP.NET/MVC.NET sử dụng .NET Framework<br />
+                                    • Các phương pháp phân tích,thiết kế hướng đối tượng (NCC Module)<br />
+                                    • Thiết kế và lập trình các ứng dụng doanh nghiệp có khả năng tương tác, kết hợp nhiều dịch vụ bao gồm máy chủ tại chỗ và Windows Azure<br />
+                                    • Thực hiện dự án phát triển phầm mềm, website bằng công nghệ .Net<br />
+                                    • Áp dụng quy trình phát triển phần mềm Agile (NCC Module)<br />
+                                    • Các giải pháp CNTT (NCC Module)
+                                </p>
+                                <p class="hocky">
+                                    Học kỳ 4:
+                                </p>
+                                <p>
+                                    • Phát triển và triển khai các ứng dụng Web Enterprise trong J2EE sử dụng JSP và Servlet<br />
+                                    • Phát triển website doanh nghiệp bằng Java EE<br />
+                                    • Phát triển ứng dụng web chuẩn MVC với Strut JSF<br />
+                                    • Phát triển ứng dụng giao diện cao cấp với EJB<br />
+                                    • Phát triển ứng dụng dịch vụ Web (Web Service)<br />
+                                    • Phát triển các ứng dụng Android chạy trên thiết bị di động và thiết bị không dây
+                                    • Bảo mật thông tin trong môi trường không dây (NCC Module)<br />
+                                    • Tìm hiểu kỹ thuật phân tích, thiết kế chi tiết kỹ thuật, kịch bản thử nghiệm để phát triển một dự án (NCC Module)
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="khoahoc_3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="row">
+                    <div class="col-lg-5 pad0">
+                        <figure>
+                            <img data-src="./assets/images/popup_khoahoc3.png" alt="" class="img-fluid d-block lazy">
+                        </figure>
+                    </div>
+                    <div class="col-lg-7 pad0">
+                        <div class="popup_khoahoc">
+                            <div class="khoahoc_title">
+                                <p>
+                                    Lập trình phần mềm
+                                    <span>ứng dụng</span>
+                                </p>
+                            </div>
+                            <div class="khoahoc_content">
+                                <p class="hocky">
+                                    Học kỳ 1:
+                                </p>
+                                <p>
+                                    • Áp dụng tư duy để viết chương trình trong ngôn ngữ lập trình C. <br />
+                                    • Dùng HTML5/CSS3/ JavaScript để lập trình các cấu trúc web và ứng dụng.<br />
+                                    • Nghiên cứu Framework Boostrap và Jquery để thiết kế ứng dụng website và mobile web.<br />
+                                    • Chuẩn hóa, quản trị cơ sở dữ liệu.<br />
+                                    • Hiểu các nguyên lý thiết kế, lập trình quản lý cơ sở dữ liệu (NCC module).<br />
+                                    • Xây dựng ứng dụng web bằng PHP.<br />
+                                    • Sử dụng Adobe Dreamweaver phát triển các trang web tương tác.
+                                </p>
+                                <p class="hocky">
+                                    Học kỳ 2:
+                                </p>
+                                <p>
+                                    • Sử dụng XML và JSON để lưu trữ và trao đổi dữ liệu.<br />
+                                    • Thiết kế và phát triển ứng dụng desktop bằng Java.<br />
+                                    • Lập trình hướng đối tượng sử dụng Java.<br />
+                                    • Hiểu được đặc điểm của hệ thống thông tin cùng với các quy trình và công cụ được sử dụng trong việc phát triển các hệ thống ứng dụng máy tính (NCC module).<br />
+                                    • Xây dựng ứng dụng thực tế bằng Java.<br />
+                                    • Lập trình hướng đối tượng với C#.<br />
+                                    • Phát triển Website hướng dữ liệu (NCC Module).
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="./js/slick.min.js" defer></script>
+    <script type="text/javascript" src="./js/jquery.lazy.min.js" defer></script>
+    <script type="text/javascript" src="./js/common.js?v=3" defer></script>
+</body>
+
+</html>
