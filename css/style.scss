@@ -653,15 +653,26 @@ main {
 
     .khoahoc__infor {
         margin: 0 1rem;
+        overflow: hidden;
+
+        .overflow-hidden {
+            overflow: hidden;
+        }
 
         figure {
             margin-bottom: 0;
             border-top-left-radius: 10px;
             border-top-right-radius: 10px;
+            transition: all .3s linear;
 
             img {
                 width: 100%;
             }
+
+            &:hover {
+                transform: scale(1.1);
+            }
+
         }
 
         .content {
