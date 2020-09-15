@@ -121,6 +121,7 @@ img {
     padding: 0;
 }
 
+
 .no-pad-left {
     padding-left: 0;
 }
@@ -397,7 +398,8 @@ main {
         }
     }
 
-    form {
+    // form
+    .form_header {
         background: transparent;
         padding: 1.5rem 1rem;
         @include border-radius(0px);
@@ -803,13 +805,13 @@ main {
 
     .hocphi_tragop {
         display: flex;
-        align-items: center;
+        align-items: stretch;
 
         .common {
             background: #fff;
             @include border-radius(5px);
-            margin-bottom: 1rem;
-            margin-right: 1rem;
+            // width: 33%;
+            width: 200px;
 
             p {
                 margin-bottom: 0;
@@ -821,19 +823,29 @@ main {
                     cover,
                     center);
                 @include border-radius(5px);
-                padding: 1rem 2rem;
+                padding: 1rem;
+                height: 88px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
 
                 p {
                     color: #000000;
                     text-transform: uppercase;
-                    font-size: 2.25rem;
+                    font-size: 1.5rem;
                     text-align: center;
                     font-family: $font_Bold;
+                    line-height: 1.2;
                 }
             }
 
             &__content {
                 padding: 1rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 150px;
 
                 p {
                     color: #274EDB;
@@ -843,9 +855,25 @@ main {
 
                     &:last-of-type {
                         font-family: $font_Bold;
-                        font-size: 96px;
+                        font-size: 60px;
                     }
                 }
+
+                &--large1 {
+                    font-family: $font_Bold !important;
+                }
+
+                &--large2 {
+                    font-size: 96px !important;
+                }
+            }
+
+            &--large {
+                transform: scale(1.5);
+            }
+
+            &:not(:last-child) {
+                margin-right: 4rem;
             }
         }
     }
@@ -853,6 +881,11 @@ main {
     p {
         font-size: 1.5rem;
         text-transform: uppercase;
+
+        &.form_ft_header {
+            font-family: $font_Bold;
+            text-align: center;
+        }
     }
 
     form {
@@ -907,12 +940,20 @@ main {
         }
     }
 
+    @media screen and (min-width: 1200px) and (max-width:1399px) {
+        padding: 6rem 0;
+    }
+
+    @media screen and (min-width: 1400px) and (max-width:1499px) {
+        padding: 7rem 0;
+    }
+
     @media screen and (min-width: 1920px) {
-        padding: 14rem 0;
+        padding: 15rem 0;
     }
 
     @media screen and (min-width: 2560px) {
-        padding: 22rem 0;
+        padding: 24rem 0;
     }
 }
 
@@ -924,7 +965,7 @@ main {
         list-style-type: none;
 
         li {
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             position: relative;
 
             &:before {
@@ -938,6 +979,12 @@ main {
                 margin-bottom: 0;
             }
         }
+    }
+
+    p {
+        color: #274EDB;
+        padding-left: 40px;
+        margin-bottom: 0;
     }
 }
 
@@ -1138,6 +1185,10 @@ footer {
 .modal-dialog {
     @media screen and (min-width: 1200px) {
         max-width: 1000px;
+
+        .pad-lg-0 {
+            padding: 0;
+        }
     }
 }
 
@@ -1155,6 +1206,11 @@ footer {
         font-family: $font_Bold;
         font-size: 1.5rem;
         z-index: 99;
+
+        @media screen and (max-width:575.98px) {
+            top: 40px;
+            right: 10px;
+        }
     }
 
     figure {
@@ -1231,7 +1287,7 @@ footer {
             line-height: 4rem;
 
             span {
-                font-size: 2.7rem;
+                font-size: 2.5rem;
             }
         }
 
@@ -1336,13 +1392,16 @@ footer {
             no-repeat,
             cover,
             center);
-        padding: 0;
+        margin-top: -9rem;
 
         .hocphi_tragop {
             justify-content: space-between;
+            flex-direction: column;
+            flex-direction: row-reverse;
+            flex-wrap: wrap;
 
             .common {
-                margin-right: 0;
+                margin-bottom: 1rem;
                 width: 48%;
 
                 &__title {
@@ -1362,11 +1421,32 @@ footer {
                         }
                     }
                 }
+
+                &--large {
+                    transform: none;
+                    width: 100%;
+                }
+
+                &:not(:last-child) {
+                    margin-right: 0rem;
+                }
             }
         }
 
         p {
             font-size: 1.3rem;
+
+            &.form_ft_header {
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    #thongtin {
+        margin-top: -9rem;
+
+        figure {
+            width: 60%;
         }
     }
 
